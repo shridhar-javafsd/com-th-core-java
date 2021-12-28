@@ -17,6 +17,7 @@ public class App {
 		String password = "root";
 
 		Class.forName(className);
+		
 		Connection con = DriverManager.getConnection(url, user, password);
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
@@ -24,6 +25,8 @@ public class App {
 		while(rs.next()) {
 			System.out.println(rs.getString(1) + " " + rs.getString(2));
 		}
+
+		con.close();
 
 		System.out.println("End");
 	}
