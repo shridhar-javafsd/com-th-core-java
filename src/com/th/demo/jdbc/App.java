@@ -15,7 +15,7 @@ public class App {
 		System.out.println("Start");
 
 		String className = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql:localhost:3306/thdb";
+		String url = "jdbc:mysql:localhost:3306/sys";
 		String sql = "";
 		String user = "root";
 		String password = "root";
@@ -23,7 +23,7 @@ public class App {
 		Class.forName(className);
 		Connection con = DriverManager.getConnection(url, user, password);
 		Statement st = con.createStatement();
-		ResultSet rs = st.executeQuery(sql);
+//		ResultSet rs = st.executeQuery(sql);
 
 		System.out.println("End");
 
