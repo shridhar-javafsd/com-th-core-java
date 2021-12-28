@@ -50,7 +50,6 @@ public class App {
 		empList2.forEach((emp) -> {
 			System.out.println(emp.toString());
 		});
-
 	}
 
 }
