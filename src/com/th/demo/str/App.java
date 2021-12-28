@@ -32,6 +32,7 @@ public class App {
 
 		// Java Stream API
 
+		// convert collection to stream 
 		Stream<Employee> empStream = empList.stream();
 //		empStream.
 
