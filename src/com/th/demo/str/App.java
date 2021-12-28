@@ -43,6 +43,12 @@ public class App {
 		Stream<Employee> empWithHigherSal = empStream.filter(emp -> emp.getSalary() >= 50000);
 		empWithHigherSal.forEach(e -> System.out.println(e.toString()));
 
+		System.out.println("filter emps with higher salaries and return a collection");
+		List<Employee> empList2 = empList;
+		empList2.forEach((emp) -> {
+			System.out.println(emp.toString());
+		});
+
 	}
 
 }
