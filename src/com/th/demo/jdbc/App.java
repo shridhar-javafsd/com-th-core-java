@@ -1,10 +1,6 @@
 package com.th.demo.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 // JDBC - Java Database Connectivity 
 
@@ -27,11 +23,8 @@ public class App {
 		
 		while(rs.next()) {
 			System.out.println(rs.getString(1) + " " + rs.getString(2));
-			
 		}
 
 		System.out.println("End");
-
 	}
-
 }
