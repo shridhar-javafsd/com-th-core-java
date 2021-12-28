@@ -3,6 +3,7 @@ package com.th.demo.str;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class App {
@@ -32,12 +33,16 @@ public class App {
 
 		// Java Stream API
 
-		// convert collection to stream 
+		// convert collection to stream
 		Stream<Employee> empStream = empList.stream();
-//		empStream.
+
+		// convert stream to collection
+//		List<Employee> empList2 = empStream.collect(Collectors.toList());
+
+		System.out.println("filter emps with higher salaries");
+		Stream<Employee> empWithHigherSal = empStream.filter(emp -> emp.getSalary() >= 50000);
+		empWithHigherSal.forEach(e -> System.out.println(e.toString()));
 
 	}
 
 }
-
-
